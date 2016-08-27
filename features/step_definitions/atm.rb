@@ -1,7 +1,7 @@
 $LOAD_PATH.unshift(File.expand_path(File.dirname(__FILE__)))
 require 'cucumber'
 require 'atm_iml.rb'
- 
+require 'rspec' 
 Given(/^the user's account has (\d+)$/) do |balance|
   @balance = balance
 end
@@ -26,6 +26,3 @@ end
 Then(/^the withdrawal result will be fail$/) do
   @status.should=='fail'
 end
-
-
-
